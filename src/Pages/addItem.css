@@ -1,0 +1,21 @@
+label {
+    display: block;
+    margin-top: 10px;
+    }
+    input[type="text"], select {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    }
+    button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
