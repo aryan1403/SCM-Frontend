@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './addItem.css';
+import { v4 as uuidv4 } from 'uuid';
+import { addItem } from '../helpers/db';
+
 function AddItem() {
   const [itemName, setItemName] = useState('');
   const [description, setDescription] = useState('');
@@ -12,6 +15,30 @@ function AddItem() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // code to add item to inventory goes here
+
+    /* const data = new db.ItemModel({
+      _id: "2",
+      title: "xyz",
+      sdesc: "xyz",
+      ldesc: "abc",
+      price: 123,
+      quantity: 1,
+      supplier: "me",
+      cateogery: "idk",
+    }); */
+
+    const data = {
+      _id: uuidv4().toString(),
+      title: "Aaryan",
+      sdesc: "Aaryan",
+      ldesc: "description",
+      price: 123,
+      quantity: 12,
+      supplier: "aaryan",
+      cateogery: "aryan",
+    }
+
+    addItem(data);
   }
 
   return (
