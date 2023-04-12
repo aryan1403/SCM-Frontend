@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './UpdateItem.css';
+
 
 function UpdateItem(props) {
   const [itemName, setItemName] = useState(props.item.itemName);
