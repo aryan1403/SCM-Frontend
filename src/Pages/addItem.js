@@ -29,21 +29,21 @@ function AddItem() {
 
     const data = {
       _id: uuidv4().toString(),
-      title: "Aaryan",
-      sdesc: "Aaryan",
-      ldesc: "description",
-      price: 123,
-      quantity: 12,
-      supplier: "aaryan",
-      cateogery: "aryan",
+      title: itemName,
+      sdesc: description,
+      ldesc: description,
+      price: price,
+      quantity: quantity,
+      supplier: supplier,
+      cateogery: category,
     }
 
-    addItem(data);
+    addItem(data).then(res => alert(res));
   }
 
   return (
-    <div>
-      <h1>Add Item</h1>
+    <div className='additem'>
+      <h1 className='additemlabel'>Add Item</h1>
       <form class="form" onSubmit={handleSubmit}>
         <label htmlFor="item-name">Item Name:</label>
         <input type="text" id="item-name" name="item-name" value={itemName} onChange={(e) => setItemName(e.target.value)} required />
