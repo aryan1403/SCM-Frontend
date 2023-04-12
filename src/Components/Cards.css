@@ -1,0 +1,22 @@
+.card {
+    width: 24rem;
+    height: 25rem;
+}
+
+.card-img {
+    width: 24rem;
+    height: 25rem;
+}
+
+.card-title {
+    color: aliceblue;
+    float: inline-start;
+}
+
+.card-text {
+    float: left;
+}
+
+.Cards {
+    align-items: flex-end;
+}
