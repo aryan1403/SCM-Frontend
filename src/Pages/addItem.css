@@ -4,12 +4,17 @@ label {
     }
     input[type="text"], select {
     display: block;
-    width: 100%;
+    width: 30%;
     padding: 5px;
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-left: 50px;    
     box-sizing: border-box;
     }
+    form {
+        padding: 30px;
+    }
     button {
+    margin-left: 210px;
     display: block;
     margin-top: 20px;
     padding: 10px;
