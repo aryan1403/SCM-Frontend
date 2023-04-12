@@ -17,11 +17,13 @@ function AddItem() {
   return (
     <div>
       <h1>Add Item</h1>
-      <form onSubmit={handleSubmit}>
+      <form class="form" onSubmit={handleSubmit}>
         <label htmlFor="item-name">Item Name:</label>
         <input type="text" id="item-name" name="item-name" value={itemName} onChange={(e) => setItemName(e.target.value)} required />
 
-        <label htmlFor="description">Description:</label>
+        <label htmlFor="long description">Long Description:</label>
+        <input type="text" id="description" name="description" value={description} onChange={(e) => setDescription(e.target.value)} required />
+        <label htmlFor="short description">Short Description:</label>
         <input type="text" id="description" name="description" value={description} onChange={(e) => setDescription(e.target.value)} required />
 
         <label htmlFor="category">Category:</label>
