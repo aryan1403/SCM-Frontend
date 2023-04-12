@@ -1,18 +1,27 @@
 import React, { useState } from 'react';
 
-function EditItem(props) {
-  const [itemName, setItemName] = useState(props.item.itemName);
-  const [Ldescription, setLDescription] = useState(props.item.Ldescription);
-  const [Sdescription, setSDescription] = useState(props.item.Sdescription);
-  const [category, setCategory] = useState(props.item.category);
-  const [supplier, setSupplier] = useState(props.item.supplier);
-  const [price, setPrice] = useState(props.item.price);
-  const [unitOfMeasure, setUnitOfMeasure] = useState(props.item.unitOfMeasure);
-  const [quantity, setQuantity] = useState(props.item.quantity);
+export default function Edit(props) {
+  /* const [itemName, setItemName] = useState('' || props.item.itemName );
+  const [Ldescription, setLDescription] = useState('' || props.item.Ldescription || '');
+  const [Sdescription, setSDescription] = useState('' || props.item.Sdescription || '');
+  const [category, setCategory] = useState('' || props.item.category || '');
+  const [supplier, setSupplier] = useState('' || props.item.supplier || '');
+  const [price, setPrice] = useState('' || props.item.price || '');
+  const [unitOfMeasure, setUnitOfMeasure] = useState('' || props.item.unitOfMeasure || '');
+  const [quantity, setQuantity] = useState('' || props.item.quantity || ''); */
+
+  const [itemName, setItemName] = useState('');
+  const [Ldescription, setLDescription] = useState('');
+  const [Sdescription, setSDescription] = useState('');
+  const [category, setCategory] = useState('');
+  const [supplier, setSupplier] = useState('');
+  const [price, setPrice] = useState('');
+  const [unitOfMeasure, setUnitOfMeasure] = useState('');
+  const [quantity, setQuantity] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const editedItem = {
+    /* const editedItem = {
       id: props.item.id,
       itemName: itemName,
       Ldescription: Ldescription,
@@ -23,8 +32,8 @@ function EditItem(props) {
       price: price,
       unitOfMeasure: unitOfMeasure,
       quantity: quantity
-    };
-    props.handleEditItem(editedItem);
+    }; */
+    //props.handleEditItem(editedItem);
   }
 
   return (
@@ -60,10 +69,8 @@ function EditItem(props) {
         <input type="text" id="quantity" name="quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} required />
 
         <button type="submit">Save</button>
-        <button onClick={() => props.handleCancelEdit()}>Cancel</button>
+        <button onClick={() => {}}>Cancel</button>
       </form>
     </div>
   );
 }
-
-export default EditItem;

@@ -10,6 +10,7 @@ import AddItem from "./Pages/addItem";
 import AdminConsole from "./Pages/adminconsole";
 import ManageInventory from "./Pages/manageInventory";
 import NavBar from "./Components/NavBar";
+import Edit from "./Pages/edit";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,15 @@ const router = createBrowserRouter([
       <>
         <NavBar />
         <AdminConsole />
+      </>
+    ),
+  },
+  {
+    path: "/edit",
+    element: (
+      <>
+        <NavBar />
+        <Edit handlecanceledit={() => {}} />
       </>
     ),
   },
