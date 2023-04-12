@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './addItem.css';
 function EditItem(props) {
   const [itemName, setItemName] = useState(props.item.itemName);
   const [Ldescription, setLDescription] = useState(props.item.Ldescription);
