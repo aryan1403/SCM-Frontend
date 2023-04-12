@@ -27,9 +27,9 @@ function AddItem() {
         <label htmlFor="category">Category:</label>
         <select id="category" name="category" value={category} onChange={(e) => setCategory(e.target.value)} required>
           <option value="">-- Select a category --</option>
-          <option value="Electronics">Electronics</option>
-          <option value="Clothing">Clothing</option>
-          <option value="Food">Food</option>
+          <option value="primary aluminium">primary aluminium</option>
+          <option value="aluminium value added products">aluminium value added products</option>
+          <option value="metallurgical alumina">metallurgical alumina</option>
         </select>
 
         <label htmlFor="supplier">Supplier:</label>
