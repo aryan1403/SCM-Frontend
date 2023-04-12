@@ -17,7 +17,7 @@ function AddItem() {
   return (
     <div>
       <h1>Add Item</h1>
-      <form onSubmit={handleSubmit}>
+      <form class="form" onSubmit={handleSubmit}>
         <label htmlFor="item-name">Item Name:</label>
         <input type="text" id="item-name" name="item-name" value={itemName} onChange={(e) => setItemName(e.target.value)} required />
 
