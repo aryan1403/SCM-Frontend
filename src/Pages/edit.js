@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import './addItem.css';
 function EditItem(props) {
   const [itemName, setItemName] = useState(props.item.itemName);
@@ -10,9 +11,10 @@ function EditItem(props) {
   const [unitOfMeasure, setUnitOfMeasure] = useState(props.item.unitOfMeasure);
   const [quantity, setQuantity] = useState(props.item.quantity);
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const editedItem = {
+    /* const editedItem = {
       id: props.item.id,
       itemName: itemName,
       Ldescription: Ldescription,
@@ -23,8 +25,8 @@ function EditItem(props) {
       price: price,
       unitOfMeasure: unitOfMeasure,
       quantity: quantity
-    };
-    props.handleEditItem(editedItem);
+    }; */
+    //props.handleEditItem(editedItem);
   }
 
   return (
@@ -60,10 +62,8 @@ function EditItem(props) {
         <input type="text" id="quantity" name="quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} required />
 
         <button type="submit">Save</button>
-        <button onClick={() => props.handleCancelEdit()}>Cancel</button>
+        <button onClick={() => {}}>Cancel</button>
       </form>
     </div>
   );
 }
-
-export default EditItem;

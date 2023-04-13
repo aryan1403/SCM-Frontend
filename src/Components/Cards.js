@@ -10,7 +10,7 @@ export default function Cards(props) {
         <br/>
         <h4 className="card-text">{props.content}</h4>
         <br/>
-        <Link to={props.uri} className="btn btn-primary">{props.btn}</Link>
+        <Link to={props.uri} onClick={props.click} className="btn btn-primary">{props.btn}</Link>
     </div>
     </div>
   );

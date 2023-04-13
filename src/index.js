@@ -1,44 +1,79 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
 import NoPage from "./Components/NoPage";
-import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import ReadMe from './Pages/readme';
-import AddItem from './Pages/addItem';
-import AdminConsole from './Pages/adminconsole';
-import ManageInventory from './Pages/manageInventory';
-
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ReadMe from "./Pages/readme";
+import AddItem from "./Pages/addItem";
+import AdminConsole from "./Pages/adminconsole";
+import ManageInventory from "./Pages/manageInventory";
+import NavBar from "./Components/NavBar";
+import Edit from "./Pages/edit";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: (
+      <>
+        <NavBar />
+        <App />
+      </>
+    ),
   },
   {
     path: "/readme",
-    element: <ReadMe/>
+    element: (
+      <>
+        <NavBar />
+        <ReadMe />
+      </>
+    ),
   },
   {
     path: "/addItemInventory",
-    element: <AddItem/>
+    element: (
+      <>
+        <NavBar />
+        <AddItem />
+      </>
+    ),
   },
   {
     path: "/manageInventory",
-    element: <ManageInventory/>
+    element: (
+      <>
+        <NavBar />
+        <ManageInventory />
+      </>
+    ),
   },
   {
     path: "/adminconsole",
-    element: <AdminConsole/>
+    element: (
+      <>
+        <NavBar />
+        <AdminConsole />
+      </>
+    ),
+  },
+  {
+    path: "/edit",
+    element: (
+      <>
+        <NavBar />
+        <Edit handlecanceledit={() => {}} />
+      </>
+    ),
   },
   {
     path: "*",
-    element: <NoPage/>
+    element: <NoPage />,
   },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />

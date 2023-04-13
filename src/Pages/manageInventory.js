@@ -1,5 +1,5 @@
-import './Manage.css';
-import Cards from './Components/Cards';
+import './manageInventory.css';
+import Cards from '../Components/Cards';
 export default function ManageInventory(props) {
     const cardsData = [
         {
@@ -10,12 +10,12 @@ export default function ManageInventory(props) {
         {
           img: "",
           content: "Update Items in the Inventory",
-          uri: "update"
+          uri: "/update"
         },
         {
           img: "",
           content: "Delete Items from the Inventory",
-          uri: "delete"
+          uri: "/delete"
         },
       ];
     return (

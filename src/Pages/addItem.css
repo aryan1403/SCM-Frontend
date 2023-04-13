@@ -1,19 +1,38 @@
 label {
     display: block;
-    margin-top: 10px;
-    }
-    input[type="text"], select {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.additem {
+    width:100%;
+    align-items: center;
+}
+
+.additemlabel {
+    margin-top: 20px;
+    margin-left: 30px;
+    align-items: center;
+}
+.form {
+    width: 70%;
+    margin-top: 50px;
+    margin-left: 50px;
+    align-items: center;
+}
+input[type="text"],
+
+select {
     display: block;
     width: 30%;
     padding: 5px;
     margin-top: 10px;
-    margin-left: 50px;    
+    margin-left: 0px;
     box-sizing: border-box;
-    }
-    form {
-        padding: 30px;
-    }
-    button {
+}
+
+button {
     margin-left: 210px;
     display: block;
     margin-top: 20px;
@@ -23,4 +42,4 @@ label {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    }
+}
