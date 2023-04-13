@@ -19,7 +19,7 @@ export default function ReadMe() {
             <div class="container">
                 <div class="row">
                     <div class="about-col-1">
-                        <img style="padding-top: 30px;" src="images/user.webp">
+                        <img style="padding-top: 30px;" src="/user.webp">
                     </div>
                     <div class="about-col-2">
                         <h1 class="sub-title">About our application</h1>
@@ -54,21 +54,21 @@ export default function ReadMe() {
             <div>
                 <i class="fas fa-code"></i>
                 <h2>React JS</h2>
-                <img src="images/reactjs.png" >
+                <img src="/reactjs.png" >
                 <p> ReactJS is a free and open-source front-end JavaScript library for building user interfaces based on components.</p>
                 
             </div>
             <div>
                 <i class="fas fa-code"></i>
                 <h2>Node.js</h2>
-                <img src="images/nodejs.jpg" >
+                <img src="/nodejs.jpg" >
                 <p> Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser.</p>
                 
             </div>
             <div>
                 <i class="fas fa-code"></i>
                 <h2>MongoDB</h2>
-                <img src="images/mongodb.jpg" >
+                <img src=" /mongodb.jpg" >
                 <p>MongoDB is a source-available cross-platform document-oriented database program.</p>
                 
             </div>
