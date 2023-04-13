@@ -47,6 +47,37 @@ export default function ReadMe() {
                 </div>
             </div>
         </div>
-        </>
-    );
-}
+    <div id="services">
+    <div class="container">
+        <h1 class="sub-title">Tools Used</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>React JS</h2>
+                <img src="images/reactjs.png" >
+                <p> ReactJS is a free and open-source front-end JavaScript library for building user interfaces based on components.</p>
+                
+            </div>
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Node.js</h2>
+                <img src="images/nodejs.jpg" >
+                <p> Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser.</p>
+                
+            </div>
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>MongoDB</h2>
+                <img src="images/mongodb.jpg" >
+                <p>MongoDB is a source-available cross-platform document-oriented database program.</p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>Author: Hege Refsnes<br>
+    <a href="mailto:hege@example.com">hege@example.com</a></p>
+  </footer>
+</body>
+</html>
