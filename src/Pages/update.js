@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 
 
-function UpdateItem(props) {
-  const [itemName, setItemName] = useState(props.item.itemName);
+export default function UpdateItem(props) {
+ /* const [itemName, setItemName] = useState(props.item.itemName);
   const [Ldescription, setLDescription] = useState(props.item.Ldescription);
   const [Sdescription, setSDescription] = useState(props.item.Sdescription);
   const [category, setCategory] = useState(props.item.category);
   const [supplier, setSupplier] = useState(props.item.supplier);
   const [price, setPrice] = useState(props.item.price);
   const [unitOfMeasure, setUnitOfMeasure] = useState(props.item.unitOfMeasure);
-  const [quantity, setQuantity] = useState(props.item.quantity);
+  const [quantity, setQuantity] = useState(props.item.quantity); */
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const editedItem = {
+   /* const editedItem = {
       id: props.item.id,
       itemName: itemName,
       Ldescription: Ldescription,
@@ -23,7 +23,7 @@ function UpdateItem(props) {
       price: price,
       unitOfMeasure: UnitOfMeasure,
       quantity: quantity
-    };
+    }; */
     props.handleUpdateItem(editedItem);
   }
 
