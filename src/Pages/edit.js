@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-
 import './addItem.css';
+
+
 function EditItem(props) {
   const [itemName, setItemName] = useState(props.item.itemName);
   const [Ldescription, setLDescription] = useState(props.item.Ldescription);
@@ -30,9 +31,9 @@ function EditItem(props) {
   }
 
   return (
-    <div>
-      <h1>Edit Item</h1>
-      <form onSubmit={handleSubmit}>
+    <div className='additem'>
+      <h1 className='additemlabel'>Edit Item</h1>
+      <form className='form' onSubmit={handleSubmit}>
         <label htmlFor="item-name">Item Name:</label>
         <input type="text" id="item-name" name="item-name" value={itemName} onChange={(e) => setItemName(e.target.value)} required />
 
