@@ -1,23 +1,16 @@
 import React, { useState } from 'react';
 
-export default function Edit(props) {
-  /* const [itemName, setItemName] = useState('' || props.item.itemName );
-  const [Ldescription, setLDescription] = useState('' || props.item.Ldescription || '');
-  const [Sdescription, setSDescription] = useState('' || props.item.Sdescription || '');
-  const [category, setCategory] = useState('' || props.item.category || '');
-  const [supplier, setSupplier] = useState('' || props.item.supplier || '');
-  const [price, setPrice] = useState('' || props.item.price || '');
-  const [unitOfMeasure, setUnitOfMeasure] = useState('' || props.item.unitOfMeasure || '');
-  const [quantity, setQuantity] = useState('' || props.item.quantity || ''); */
+import './addItem.css';
+function EditItem(props) {
+  const [itemName, setItemName] = useState(props.item.itemName);
+  const [Ldescription, setLDescription] = useState(props.item.Ldescription);
+  const [Sdescription, setSDescription] = useState(props.item.Sdescription);
+  const [category, setCategory] = useState(props.item.category);
+  const [supplier, setSupplier] = useState(props.item.supplier);
+  const [price, setPrice] = useState(props.item.price);
+  const [unitOfMeasure, setUnitOfMeasure] = useState(props.item.unitOfMeasure);
+  const [quantity, setQuantity] = useState(props.item.quantity);
 
-  const [itemName, setItemName] = useState('');
-  const [Ldescription, setLDescription] = useState('');
-  const [Sdescription, setSDescription] = useState('');
-  const [category, setCategory] = useState('');
-  const [supplier, setSupplier] = useState('');
-  const [price, setPrice] = useState('');
-  const [unitOfMeasure, setUnitOfMeasure] = useState('');
-  const [quantity, setQuantity] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
