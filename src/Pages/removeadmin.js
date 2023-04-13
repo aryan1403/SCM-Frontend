@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import './addItem.css';
 export default function RemoveAdmin() {
     const [AdminId, setitemId] = useState('');
 
@@ -26,10 +26,10 @@ export default function RemoveAdmin() {
     //props.handleEditItem(editedItem);
   }
     return (
-        <>
-            <h1>Remove Admin</h1>
-            <div>
-      <form onSubmit={handleSubmit}>
+        <><div className="additem">
+            <h1 className="additemlabel">Remove Admin</h1>
+            
+      <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="item-name">Admin ID:</label>
         <input type="text" id="item-id" name="item-id" value={AdminId} onChange={(e) => setitemId(e.target.value)} required />
     

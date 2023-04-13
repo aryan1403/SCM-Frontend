@@ -33,10 +33,8 @@ export function deleteItemById(id) {
 }
 
 
-export function getAllItem() {
-    return axios.get((URL + "/getAllItem")).then(res => {
-        return res.data[0];
-    });
+export async function getAllItem() {
+    return (await axios.get((URL + "/getAllItem"))).data;
 }
 
 

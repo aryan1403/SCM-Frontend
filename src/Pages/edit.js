@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { updateItem } from '../helpers/db';
 import { v4 as uuidv4 } from 'uuid';
 import './addItem.css';
+import { Link } from 'react-router-dom';
 
 export default function EditItem(props) {
   const [itemId, setitemId] = useState('');
@@ -13,6 +14,15 @@ export default function EditItem(props) {
   const [price, setPrice] = useState('');
   const [unitOfMeasure, setUnitOfMeasure] = useState('');
   const [quantity, setQuantity] = useState('');
+
+  /* const [itemName, setItemName] = useState(props.item.itemName);
+  const [Ldescription, setLDescription] = useState(props.item.Ldescription);
+  const [Sdescription, setSDescription] = useState(props.item.Sdescription);
+  const [category, setCategory] = useState(props.item.category);
+  const [supplier, setSupplier] = useState(props.item.supplier);
+  const [price, setPrice] = useState(props.item.price);
+  const [unitOfMeasure, setUnitOfMeasure] = useState(props.item.unitOfMeasure);
+  const [quantity, setQuantity] = useState(props.item.quantity); */
 
 
   const handleSubmit = (e) => {
@@ -47,12 +57,9 @@ export default function EditItem(props) {
 
 
   return (
-    <div>
-      <h1>Edit Item</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="item-name">Item ID:</label>
-        <input type="text" id="item-id" name="item-id" value={itemId} onChange={(e) => setitemId(e.target.value)} required />
-
+    <div className='additem'>
+      <h1 className='additemlabel'>Edit Item</h1>
+      <form className='form' onSubmit={handleSubmit}>
         <label htmlFor="item-name">Item Name:</label>
         <input type="text" id="item-name" name="item-name" value={itemName} onChange={(e) => setItemName(e.target.value)} required />
 
@@ -80,10 +87,11 @@ export default function EditItem(props) {
 
         <label htmlFor="quantity">Quantity:</label>
         <input type="text" id="quantity" name="quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} required />
-
+        <br/>
         <button type="submit">Save</button>
-        <button onClick={() => {}}>Cancel</button>
+        <Link to="/showallItems"><button className='cancelbtn' type="submit">Cancel</button></Link>
       </form>
     </div>
   );
 }
+

@@ -10,7 +10,8 @@ export default function Cards(props) {
         <br/>
         <h4 className="card-text">{props.content}</h4>
         <br/>
-        <Link to={props.uri} onClick={props.click} className="btn btn-primary">{props.btn}</Link>
+        <h3 className="card-subtext">{props.subcontent}</h3>
+        <Link to={props.uri} onClick={props.click} id='cardbtn' className="btn btn-primary">{props.btn}</Link>
     </div>
     </div>
   );

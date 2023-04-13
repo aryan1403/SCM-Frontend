@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './addItem.css';
 import { v4 as uuidv4 } from 'uuid';
 import { addItem } from '../helpers/db';
+import { Link } from 'react-router-dom';
 
 function AddItem() {
   const [itemName, setItemName] = useState('');
@@ -73,7 +74,9 @@ function AddItem() {
         <label htmlFor="quantity">Quantity:</label>
         <input type="text" id="quantity" name="quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} required />
 
+        <br/>
         <button type="submit">Add Item</button>
+        <Link to="/manageInventory"><button className='cancelbtn' type="submit">Cancel</button></Link>
       </form>
     </div>
   );

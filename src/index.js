@@ -18,6 +18,7 @@ import RemoveAdmin from "./Pages/removeadmin";
 import SignInPage from "./Pages/login";
 import SignUpPage from "./Pages/register";
 import WhatsAppLogin from "./Pages/whatsaapplogin";
+import ShowAllItems from "./Pages/showallitems";
 
 const router = createBrowserRouter([
   {
@@ -64,7 +65,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/addItemInventory",
+    path: "/add",
     element: (
       <>
         <NavBar />
@@ -91,11 +92,38 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/edit",
+    path: "/edit/:id",
     element: (
       <>
         <NavBar />
         <EditItem handlecanceledit={() => {}} />
+      </>
+    ),
+  },
+  {
+    path: "/showallItems",
+    element: (
+      <>
+        <NavBar />
+        <ShowAllItems />
+      </>
+    ),
+  },
+  {
+    path: "/showallItems/edit",
+    element: (
+      <>
+        <NavBar />
+        <ShowAllItems mode="edit" />
+      </>
+    ),
+  },
+  {
+    path: "/showallItems/delete",
+    element: (
+      <>
+        <NavBar />
+        <ShowAllItems mode="delete" />
       </>
     ),
   },
@@ -109,7 +137,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/delete",
+    path: "/delete/:id",
     element: (
       <>
         <NavBar />

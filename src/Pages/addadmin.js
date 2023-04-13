@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import './addItem.css';
 export default function AddAdmin() {
     const [AdminId, setitemId] = useState('');
   const [AdminName, setItemName] = useState('');
@@ -28,9 +29,10 @@ export default function AddAdmin() {
   }
     return (
         <>
-            <h1>Add Admin</h1>
-            <div>
-      <form onSubmit={handleSubmit}>
+        <div className="additem">
+            <h1 className="additemlabel">Add Admin</h1>
+            
+      <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="item-name">Admin ID:</label>
         <input type="text" id="item-id" name="item-id" value={AdminId} onChange={(e) => setitemId(e.target.value)} required />
 

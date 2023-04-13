@@ -1,12 +1,28 @@
+.ManageLabel {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 6px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  border-bottom: solid 1px white;
+}
+
 .Manage {
-    text-align: center;
-  }
+  justify-content: center;
+  width: 100%;
+  background: rgb(152, 180, 152) ;
+  padding: 28px;
+  border-radius: 10px;
+  box-shadow: inset -2px 2px 2px white;
+}
   
-  .DisplayCards {
-    width: 75%;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.DisplayCards {
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}

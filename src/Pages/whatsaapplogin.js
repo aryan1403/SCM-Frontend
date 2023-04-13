@@ -2,26 +2,35 @@ import { useState } from "react";
 import { sendcode, sendmsg } from "../helpers/db";
 
 export default function WhatsAppLogin() {
-    const [number, setnumber] = useState('');
-    const [code, setcode] = useState('');
-    const [isdis, setisdis] = useState(true);
-
-
-    var c = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
-    
-
+  const [number, setnumber] = useState('');
+  const [code, setcode] = useState('');
+  const [isdis, setisdis] = useState(true);
+  const [btntxt, setbtntxt] = useState("Send Code");
+  const [verifycode, setverifycode] = useState("");
+  
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    var c1 = c;
-    if(isdis) {
+    if(number.length < 10) {
+      alert("Enter a valid Phone number")
+    } else {
+      console.log(number);
+      if(isdis) {
+        var c = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
         sendcode(c, number);
         alert('Code Sent Successfully to ' + number);
 
         setisdis(false);
-        console.log(c, code);
-    } else {
-        alert('Logged in Successfully');
-        sendmsg(number, "Logged in Succesfully")
+        setverifycode(code);
+        setbtntxt("Verify Code")
+      } else {
+        if(code === verifycode) {
+          alert('Logged in Successfully');
+          sendmsg(number, "Logged in Succesfully")
+        } else {
+          alert('Invalid Code');
+        }
+      }
     }
 
 
@@ -41,19 +50,20 @@ export default function WhatsAppLogin() {
   }
     return (
         <>
-            <h1>WhatsApp Login</h1>
-            <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="item-name">Enter your number:</label>
-        <input type="text" id="item-id" name="item-id" value={number} onChange={(e) => setnumber(e.target.value)} required />
-    
-
-        <label htmlFor="item-name">Enter your code:</label>
-        <input disabled={isdis} type="text" id="item-id" name="item-id" value={code} onChange={(e) => setcode(e.target.value)} required />
-    
-        <button type="submit">Validate</button>
-      </form>
-    </div>
+        <div className="additem">
+        <h1 className="additemlabel">WhatsApp Login</h1>
+        <form className="form" onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="item-name">Enter your number:</label>
+          <input type="text" value={number} name="item-name" onChange={(e) => setnumber(e.target.value)} required />
+        </div>
+        <div hidden={isdis}>
+          <label htmlFor="item-name">Enter your code:</label>
+          <input type="text" value={code} name="item-name" onChange={(e) => setcode(e.target.value)} required />
+        </div>
+          <button style={{"width": "max-content"}} type="submit">{btntxt}</button>
+        </form>
+        </div>
         </>
     );
 }

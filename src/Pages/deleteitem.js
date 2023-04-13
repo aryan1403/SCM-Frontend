@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { findItemById } from '../helpers/db';
 import './addItem.css';
 
@@ -31,13 +32,14 @@ export default function DeleteItem(props) {
 
 
   return (
-    <div>
-      <h1>Find Item</h1>
-      <form onSubmit={handleSubmit}>
+    <div className='additem'>
+      <h1 className='additemlabel'>Delete Item</h1>
+      <form className='form' onSubmit={handleSubmit}>
         <label htmlFor="item-name">Item ID:</label>
         <input type="text" id="item-id" name="item-id" value={itemId} onChange={(e) => setitemId(e.target.value)} required />
 
-        <button type="submit">Delete</button>
+        <button className='cancelbtn' type="submit">Delete</button>
+        <Link to="/showallItems"><button className='cancelbtn' type="submit">Cancel</button></Link>
       </form>
     </div>
   );

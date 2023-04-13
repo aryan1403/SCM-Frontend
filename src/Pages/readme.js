@@ -1,7 +1,8 @@
 import './readme.css';
 export default function ReadMe() {
-    return (
-        <>
+    return ( 
+
+        <div className='body'>
             <h1>Read About us</h1>
             <div id="header">
             <div class="container">
@@ -73,9 +74,10 @@ export default function ReadMe() {
             </div>
         </div>
     </div>
-</div>
-<footer>
-    <p>Author: Hege Refsnes<br/>
-    <a href="mailto:hege@example.com">hege@example.com</a></p>
-</footer>
-</>)}
+    </div>
+    <footer>
+        <p>Author: Hege Refsnes<br/>
+        <a href="mailto:hege@example.com">hege@example.com</a></p>
+    </footer>
+        </div>
+)}

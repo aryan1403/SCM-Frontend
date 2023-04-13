@@ -1,6 +1,9 @@
 .card {
-    width: 24rem;
-    height: 25rem;
+    max-width: 24rem;
+    max-height: 25rem;
+    width: max-content;
+    height: max-content;
+    position: relative;
 }
 
 .card-img {
@@ -11,12 +14,30 @@
 .card-title {
     color: aliceblue;
     float: inline-start;
+    margin-top: 15px;
+    font-weight: 600;
 }
 
 .card-text {
+    float: inline-start;
+    color: azure;
+    margin-top: 20px;
+}
+.card-subtext {
     float: left;
+    color: antiquewhite;
+    font-size: 20px;
 }
 
 .Cards {
     align-items: flex-end;
+}
+
+#cardbtn {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: max-content;
+    margin-bottom: 25px;
+
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './addItem.css';
 
 export default function UpdateItem(props) {
  /* const [itemName, setItemName] = useState(props.item.itemName);
