@@ -1,0 +1,12 @@
+.DisplayCards {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aconsole {
+text-align: center;
+}

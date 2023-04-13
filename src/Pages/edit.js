@@ -1,20 +1,35 @@
 import React, { useState } from 'react';
-import ShowAllItems from './showallitems';
-
+import { updateItem } from '../helpers/db';
+import { v4 as uuidv4 } from 'uuid';
 import './addItem.css';
-function EditItem(props) {
-  const [itemName, setItemName] = useState(props.item.itemName);
-  const [Ldescription, setLDescription] = useState(props.item.Ldescription);
-  const [Sdescription, setSDescription] = useState(props.item.Sdescription);
-  const [category, setCategory] = useState(props.item.category);
-  const [supplier, setSupplier] = useState(props.item.supplier);
-  const [price, setPrice] = useState(props.item.price);
-  const [unitOfMeasure, setUnitOfMeasure] = useState(props.item.unitOfMeasure);
-  const [quantity, setQuantity] = useState(props.item.quantity);
+
+export default function EditItem(props) {
+  const [itemId, setitemId] = useState('');
+  const [itemName, setItemName] = useState('');
+  const [Ldescription, setLDescription] = useState('');
+  const [Sdescription, setSDescription] = useState('');
+  const [category, setCategory] = useState('');
+  const [supplier, setSupplier] = useState('');
+  const [price, setPrice] = useState('');
+  const [unitOfMeasure, setUnitOfMeasure] = useState('');
+  const [quantity, setQuantity] = useState('');
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const data = {
+      _id: uuidv4().toString(),
+      title: itemName,
+      sdesc: Sdescription,
+      ldesc: Ldescription,
+      price: price,
+      quantity: quantity,
+      supplier: supplier,
+      cateogery: category,
+    };
+    updateItem(data)
+    alert("Updated Item Successfully");
     /* const editedItem = {
       id: props.item.id,
       itemName: itemName,
@@ -35,6 +50,9 @@ function EditItem(props) {
     <div>
       <h1>Edit Item</h1>
       <form onSubmit={handleSubmit}>
+        <label htmlFor="item-name">Item ID:</label>
+        <input type="text" id="item-id" name="item-id" value={itemId} onChange={(e) => setitemId(e.target.value)} required />
+
         <label htmlFor="item-name">Item Name:</label>
         <input type="text" id="item-name" name="item-name" value={itemName} onChange={(e) => setItemName(e.target.value)} required />
 
