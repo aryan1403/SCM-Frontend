@@ -56,9 +56,15 @@ function AddItem() {
         <label htmlFor="category">Category:</label>
         <select id="category" name="category" value={category} onChange={(e) => setCategory(e.target.value)} required>
           <option value="">-- Select a category --</option>
-          <option value="primary aluminium">primary aluminium</option>
-          <option value="aluminium value added products">aluminium value added products</option>
-          <option value="metallurgical alumina">metallurgical alumina</option>
+          <option value="Building sheets">Building sheets</option>
+          <option value="Hot rolled plates">Hot rolled plates</option>
+          <option value="Cold rolled coils">Cold rolled coils</option>
+          <option value="Pattern sheets">Pattern sheets</option>
+          <option value="PCB entry sheets">PCB entry sheets</option>
+          <option value="Flooring sheets">Flooring sheets</option>
+          <option value="Foil sheets">Foil sheets</option>
+           
+           
         </select>
 
         <label htmlFor="supplier">Supplier:</label>
